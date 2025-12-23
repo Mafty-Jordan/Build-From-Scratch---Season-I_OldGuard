@@ -1,0 +1,124 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --primary: #10b981; /* Emerald Green */
+    --danger: #ef4444;  /* Red */
+    --text: #e2e8f0;
+    --border: #334155;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-color);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* LAYOUT */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.left-panel {
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px;
+}
+
+h1 { 
+    text-align: center; 
+    color: var(--primary); 
+    margin-bottom: 40px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+}
+
+/* CARDS */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.card h2 { 
+    margin-top: 0; 
+    border-bottom: 1px solid var(--border); 
+    padding-bottom: 10px; 
+    font-size: 1.2rem; 
+}
+
+/* FORM */
+.form-group { margin-bottom: 15px; }
+
+label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+input { 
+    width: 100%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    background: #0f172a; 
+    border: 1px solid var(--border); 
+    color: white; 
+    font-family: inherit;
+}
+
+button {
+    width: 100%; 
+    padding: 15px; 
+    background-color: var(--primary); 
+    color: #000; 
+    font-weight: bold;
+    border: none; 
+    cursor: pointer; 
+    transition: background 0.3s;
+}
+
+button:hover { background-color: #34d399; }
+button:disabled { background-color: #555; cursor: not-allowed; }
+
+/* TABLES */
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--border); }
+th { color: var(--primary); }
+.banned { color: var(--danger); font-weight: bold; }
+
+/* BLOCKCHAIN VISUALIZATION */
+.chain-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.block {
+    background: #0f172a;
+    border-left: 4px solid var(--primary);
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+.block.genesis { border-left-color: #f59e0b; }
+.hash { color: #64748b; font-size: 0.8em; word-break: break-all; }
+
+/* LOADING SPINNER */
+#loader { 
+    display: none; 
+    text-align: center; 
+    margin-top: 10px; 
+    color: var(--primary); 
+}

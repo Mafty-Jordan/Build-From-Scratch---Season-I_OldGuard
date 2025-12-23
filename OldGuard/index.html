@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReputationChain Node</title>
+    <link rel="icon" href="Images/OldGuard.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1><span style="color:white">Build_From_Scratch</span> // OldGuard</h1>
+
+    <div class="container">
+        <div class="left-panel">
+            
+            <div class="card">
+                <h2>Create Transaction</h2>
+                <div class="form-group">
+                    <label>Sender (You)</label>
+                    <input type="text" id="sender" placeholder="Alice">
+                </div>
+                <div class="form-group">
+                    <label>Receiver</label>
+                    <input type="text" id="receiver" placeholder="Bob">
+                </div>
+                <div class="form-group">
+                    <label>Amount (0 = Fraud)</label>
+                    <input type="number" id="amount" placeholder="50">
+                </div>
+                <button id="mineBtn">⛏️ MINE BLOCK</button>
+                <div id="loader">Processing PoW (Calculating Hashes)...</div>
+            </div>
+
+            <div class="card">
+                <h2>Trust Scores</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scoreTable">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Immutable Ledger</h2>
+            <div id="chainContainer" class="chain-container">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
