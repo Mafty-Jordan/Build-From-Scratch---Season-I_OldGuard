@@ -53,20 +53,16 @@ Prerequisites
 •	No external libraries required (Standard Library only).
 
 Running the Node
-1.	Open your terminal.
-2.	Run the server:
+1. Copy path of OldGuard folder.
+2. Open your termainl.
+3. type in cd then past the copied path.
+4. Press enter and run the server:
 
 Bash
-python oldguard.py
+python server.py
 
-3.	You should see: OldGuard Node listening on port 8080...
-Interacting with the Node
-Since there is no frontend provided in this repository, you can interact via curl or your browser.
-To Mine a Block (Simulate Transaction):
-Bash
-curl -X POST http://localhost:8080/mine
-Response: {"message": "Block Mined & Added"}
-To View the Chain:
-Bash
-curl http://localhost:8080/chain
-Response: A JSON list of all blocks, hashes, and transactions.
+• You should see: RAW SOCKET SERVER listening on port 8000...
+
+Interacting with the Node.
+1. Copy the localhost address and paste in your browser.
+2. Enter the persons to be involved in the transactions, include postive and negitive values to see it in action.
