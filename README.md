@@ -23,23 +23,23 @@ def right_rotate(value, amount):
     return ((value >> amount) | (value << (32 - amount))) & 0xFFFFFFFF
 ```
 
-2. The Network (Raw TCP)
+### 2. The Network (Raw TCP)
 The server does not use http.server. It listens on a raw TCP socket, intercepts byte streams, and manually parses HTTP headers by splitting strings on \r\n. It constructs raw HTTP byte streams for responses, giving us full control over the network packet structure.
 
-3. The Reputation Logic
+### 3. The Reputation Logic
 The ReputationChain class maintains a ledger of trust.
 •	Positive Behavior: Successful transactions increase a user's score.
 •	Negative Behavior: Fraudulent attempts decrease the score.
 •	Ban Threshold: If a score drops below -1, the protocol automatically rejects their future blocks.
 
-Architecture
+## Architecture
 The system follows a strict Object-Oriented design:
 •	ReputationChain: The manager that holds the list of blocks and enforces rules.
 •	Block: The container that links to the previous hash and holds data.
 •	Transaction: The payload (Sender, Receiver, Amount).
 •	SHA256_Utility: The static engine that powers the mining proof-of-work.
 
-Flow of a Request:
+# Flow of a Request:
 1.	Client sends raw HTTP string ->
 2.	Socket Listener intercepts bytes ->
 3.	Manual Router parses POST /mine ->
@@ -47,12 +47,12 @@ Flow of a Request:
 5.	SHA-256 Engine performs Proof-of-Work ->
 6.	Ledger updates & Server returns JSON.
 
-Steps to Run
+# Steps to Run
 Prerequisites
 •	Python 3.x installed.
 •	No external libraries required (Standard Library only).
 
-Running the Node
+# Running the Node
 1. Copy path of OldGuard folder.
 2. Open your termainl.
 3. type in cd then past the copied path.
