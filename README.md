@@ -9,8 +9,11 @@ OldGuard is a blockchain node built without libraries. It implements the SHA-256
 OldGuard is a "Zero-Dependency" blockchain node built entirely from scratch in Python. It features:
 
 **Custom Cryptography:** A manual implementation of the SHA-256 standard (including Sigma compression functions).
+
 **Reputation Consensus:** A protocol that tracks user behavior and automatically bans malicious actors.
+
 **Raw Socket Server:** A custom HTTP server operating at the TCP transport layer, bypassing frameworks like Flask.
+
 
 ## How It Works Internally
 
