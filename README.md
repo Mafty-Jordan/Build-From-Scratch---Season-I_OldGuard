@@ -57,7 +57,7 @@ Prerequisites
 
 # Running the Node
 1. Copy path of OldGuard folder.
-2. Open your termainl.
+2. Open your terminal.
 3. type in cd then past the copied path.
 4. Press enter and run the server:
 
